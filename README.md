@@ -2,12 +2,15 @@
 
 Drive your eufy robot vacuum with a game controller.
 
-Uses the same MQTT channel as the official eufy app - no rooting, no firmware
-modification, no local network sniffing required.
+The official eufy app makes you tap a virtual D-pad on your phone screen to move the vacuum — one thumb, one direction at a time, staring at a tiny UI while trying to navigate furniture.
+
+![The eufy app's remote control interface](media/demo.jpg)
+
+This project replaces that with a real game controller. Plug in a PS5 DualSense or 8BitDo, run one command, and drive.
 
 <video src="https://github.com/user-attachments/assets/f1f1de27-be82-4bf9-a046-687b8ccd516b" controls width="100%"></video>
 
-![eufy vacuum being controlled](media/demo.jpg)
+Uses the same MQTT channel as the official app - no rooting, no firmware modification, no local network sniffing required.
 
 ---
 
