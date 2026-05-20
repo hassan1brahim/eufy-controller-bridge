@@ -7,6 +7,8 @@ modification, no local network sniffing required.
 
 <video src="https://github.com/user-attachments/assets/f1f1de27-be82-4bf9-a046-687b8ccd516b" controls width="100%"></video>
 
+![eufy vacuum being controlled](media/demo.jpg)
+
 ---
 
 ## How it works
