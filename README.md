@@ -2,11 +2,19 @@
 
 Drive your eufy robot vacuum with a game controller.
 
-The official eufy app makes you tap a virtual D-pad on your phone screen to move the vacuum — one thumb, one direction at a time, staring at a tiny UI while trying to navigate furniture.
+**The problem with the app**
+
+The eufy app's manual control gives you three buttons: forward, spin left, spin right. On a touchscreen, you can only press one at a time. To go from moving forward to turning, you have to lift your finger off the forward button first, press the turn button, then go back to forward. Every direction change is a full stop in between.
+
+Your thumb is also guessing. No tactile feedback means you're watching the phone instead of the vacuum, your arm gets tired holding it out, and any slight miss puts your finger in dead space with the vacuum still rolling.
+
+The result: a vacuum you bought to clean autonomously requires your full attention to control manually - the one time you actually need precise control.
 
 ![The eufy app's remote control interface](media/demo.jpg)
 
-This project replaces that with a real game controller. Plug in a PS5 DualSense or 8BitDo, run one command, and drive.
+**The fix**
+
+This project replaces that with a real game controller. Plug in a PS5 DualSense or 8BitDo, run one command, and drive. Dual analog sticks, proper triggers, tactile bumpers - muscle memory from years of gaming, applied to floor cleaning.
 
 <video src="https://github.com/user-attachments/assets/f1f1de27-be82-4bf9-a046-687b8ccd516b" controls width="100%"></video>
 
