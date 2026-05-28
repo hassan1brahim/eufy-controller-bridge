@@ -5,6 +5,7 @@ and verify hardware behaviour. Run all of these from the repo root.
 
 | Script | Needs controller | Needs vacuum | What it does |
 |---|---|---|---|
+| `find_device.py` | No | No | Print all devices on your account with DEVICE_ID and DEVICE_MODEL |
 | `read_controller.py` | Yes | No | Print normalised controller state live |
 | `sniff.py` | No | Yes (via app) | Monitor live MQTT traffic |
 | `test_drive.py` | No | Yes | Pulse FORWARD commands for 3 s |
@@ -13,10 +14,24 @@ and verify hardware behaviour. Run all of these from the repo root.
 
 ```bash
 # From the repo root:
+python tools/find_device.py       # credentials in config.py required
 python tools/read_controller.py   # connect controller first
 python tools/sniff.py             # then drive with the eufy app
 python tools/test_drive.py        # vacuum must be off dock and powered on
 ```
+
+## find_device.py
+
+Logs in with your `config.py` credentials and prints every device on your account:
+
+```
+Name                           DEVICE_ID            DEVICE_MODEL
+-----------------------------------------------------------------
+RoboVac C20 Omni               AOTxxxxxxxxxxxx      T2280
+```
+
+Use this during initial setup to find the `DEVICE_ID` and `DEVICE_MODEL` values
+for `config.py` without having to flip the vacuum over or dig through the app.
 
 ## read_controller.py
 

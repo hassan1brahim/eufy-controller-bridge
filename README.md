@@ -98,8 +98,8 @@ Open `config.py` and fill in:
 |---|---|
 | `EMAIL` | Your eufy account email |
 | `PASSWORD` | Your eufy account password |
-| `DEVICE_ID` | Printed on the underside of the vacuum (`AOTxxxxxxxxxxxx`). Also: eufy app → tap device → ··· → Device Info → Serial Number |
-| `DEVICE_MODEL` | `T2280` for the C20 Omni. Check the eufy app if unsure |
+| `DEVICE_ID` | Run `python tools/find_device.py` to look it up automatically. Or: printed on the underside of the vacuum (`AOTxxxxxxxxxxxx`), or eufy app → tap device → ··· → Device Info → Serial Number |
+| `DEVICE_MODEL` | Printed by `python tools/find_device.py`. Or: check the eufy app (e.g. `T2280` for the C20 Omni) |
 
 `config.py` is listed in `.gitignore` - it will never be committed.
 
@@ -191,6 +191,7 @@ eufy-controller-bridge/
 │   └── eightbitdo.py     8BitDo Ultimate 2 - Switch mode, 12-bit sticks
 │
 └── tools/                Debug scripts  (see tools/README.md)
+    ├── find_device.py    Print all account devices with DEVICE_ID and DEVICE_MODEL
     ├── read_controller.py Print normalised controller state live
     ├── sniff.py          Live MQTT monitor - shows what the eufy app sends
     └── test_drive.py     Pulse FORWARD commands without a controller
@@ -199,6 +200,14 @@ eufy-controller-bridge/
 ---
 
 ## Debugging tools
+
+### find_device.py
+
+Logs in with your `config.py` credentials and prints all devices on your account with their `DEVICE_ID` and `DEVICE_MODEL`.  Use this during initial setup instead of hunting through the app or flipping the vacuum over.
+
+```bash
+python tools/find_device.py
+```
 
 ### sniff.py
 
